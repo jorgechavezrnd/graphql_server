@@ -5,3 +5,6 @@
 
 ## Commands used for install dependencies
 - `npm i graphql`
+
+## Command for run example
+- `node index.js`
