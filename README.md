@@ -7,9 +7,14 @@
 - `npm i graphql`
 - `npm i express express-graphql`
 - `npm i nodemon -D`
+- `npm i standard -D`
 
 ## Command for run example
 - `npm run dev`
+
+## Commands for linst
+- `npm run lint`
+- `npm run lint-fix`
 
 ## GraphiQL interface URL
 - http://localhost:3000/api
