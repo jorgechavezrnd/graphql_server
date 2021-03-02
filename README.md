@@ -5,6 +5,11 @@
 
 ## Commands used for install dependencies
 - `npm i graphql`
+- `npm i express express-graphql`
+- `npm i nodemon -D`
 
 ## Command for run example
-- `node index.js`
+- `npm run dev`
+
+## GraphiQL interface URL
+- http://localhost:3000/api
