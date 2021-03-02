@@ -8,6 +8,7 @@
 - `npm i express express-graphql`
 - `npm i nodemon -D`
 - `npm i standard -D`
+- `npm i graphql-tools`
 
 ## Command for run example
 - `npm run dev`
