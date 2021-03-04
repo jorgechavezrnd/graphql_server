@@ -47,3 +47,41 @@ db.getCollection('courses').insertMany([
 
 ## GraphiQL interface URL
 - http://localhost:3000/api
+
+## Queries and mutations examples for GraphQL
+- Get Courses
+```
+{
+  getCourses {
+    _id
+    title
+    description
+  }
+}
+```
+
+- Get One Course
+```
+{
+  getCourse(id: "6040490e5dc0c32dca0c7737") {
+    _id
+    title
+    description
+  }
+}
+```
+
+- Insert Course
+```
+mutation {
+  createCourse(input: {
+    title: "Curso de ejemplo 4"
+    description: "Descripción 4"
+    topic: "diseño"
+  }) {
+    _id
+    title
+    description
+  }
+}
+```
