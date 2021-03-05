@@ -85,3 +85,54 @@ mutation {
   }
 }
 ```
+
+## Aliases example
+```
+{
+  AllCourses: getCourses{
+    _id
+    title
+  }
+  
+  Course1: getCourse(id: "6040490e5dc0c32dca0c7737"){
+    _id
+    title
+    description
+  }
+  
+  Course3: getCourse(id: "6040490e5dc0c32dca0c7739"){
+    title
+    description
+    topic
+  }
+}
+```
+
+## Fragments example
+```
+{
+  AllCourses: getCourses{
+    ...CourseFields
+  }
+  
+  Course1: getCourse(id: "6040490e5dc0c32dca0c7737"){
+    ...CourseFields
+    teacher
+  }
+  
+  Course3: getCourse(id: "6040490e5dc0c32dca0c7739"){
+    ...CourseFields
+    topic
+  }
+}
+
+fragment CourseFields on Course {
+  _id
+  title
+  description
+  people{
+    _id
+    name
+  }
+}
+```
