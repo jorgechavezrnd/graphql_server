@@ -136,3 +136,43 @@ fragment CourseFields on Course {
   }
 }
 ```
+
+## Variables example
+- Mutation
+```
+mutation AddPersonToCourse2 ($course: ID!, $person: ID!) {
+  addPeople(courseID: $course, personID: $person){
+    _id
+    title
+  }
+}
+```
+
+- Query Variables
+```
+{
+  "course": "6040490e5dc0c32dca0c7738",
+  "person": "604146d66cb5832bc0df0c54"
+}
+```
+
+- Query
+```
+query GetCourse2 ($course: ID!) {
+  getCourse(id: $course) {
+    _id
+    title
+    people {
+      _id
+      name
+    }
+  }
+}
+```
+
+- Query Variables
+```
+{
+  "course": "6040490e5dc0c32dca0c7738"
+}
+```
