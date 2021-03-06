@@ -81,13 +81,13 @@ type Mutation {
   "Edita un curso"
   editCourse(_id: ID!, input: CourseEditInput): Course
   "Elimina un curso"
-  deleteCourse(_id: ID!): String
+  deleteCourse(_id: ID!): Boolean
   "Crea una persona"
   createPerson(input: PersonInput!): Person
   "Edita una persona"
   editPerson(_id: ID!, input: PersonEditInput): Person
   "Elimina una persona"
-  deletePerson(_id: ID!): String
+  deletePerson(_id: ID!): Boolean
   "Agrega una persona a un curso"
   addPeople(courseID: ID!, personID: ID!): Course
 }
