@@ -39,8 +39,11 @@ db.getCollection('courses').insertMany([
 ])
 ```
 
-## Command for run
+## Command for run in dev mode
 - `npm run dev`
+
+## Command for run in production mode (without GraphiQL)
+- `npm start`
 
 ## Commands for linst
 - `npm run lint`
