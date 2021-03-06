@@ -11,6 +11,7 @@
 - `npm i graphql-tools`
 - `npm i dotenv`
 - `npm i mongodb`
+- `npm i cors`
 
 ## Command for create mongodb container with docker
 - `docker run -d -p 27017:27017 --name mongodb_platzi -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=p1a7z1 mongo`
