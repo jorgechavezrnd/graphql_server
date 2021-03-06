@@ -215,3 +215,29 @@ mutation createNewMonitor($monitorInput: PersonInput!){
   }
 }
 ```
+
+## Queries with directives
+- Query
+```
+query getPeopleData($monitor: Boolean!, $avatar: Boolean!) {
+  getPeople{
+    _id
+    name
+    ... on Monitor @include(if: $monitor) {
+      phone
+    }
+    ... on Student @include(if: $avatar) {
+      avatar
+      email
+    }
+  }
+}
+```
+
+- Query Variables
+```
+{
+  "monitor": false,
+  "avatar": true
+}
+```
