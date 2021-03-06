@@ -241,3 +241,28 @@ query getPeopleData($monitor: Boolean!, $avatar: Boolean!) {
   "avatar": true
 }
 ```
+
+## Commands example for create index in MongoDB
+- `db.courses.createIndex({"$**": "text"})`
+- `db.students.createIndex({"$**": "text"})`
+
+## Query for Unions
+```
+{
+  searchItems(keyword: "1"){
+    __typename
+    ... on Course {
+      title
+      description
+    }
+    ... on Monitor {
+      name
+      phone
+    }
+    ... on Student {
+      name
+      email
+    }
+  }
+}
+```
