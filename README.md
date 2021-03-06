@@ -176,3 +176,42 @@ query GetCourse2 ($course: ID!) {
   "course": "6040490e5dc0c32dca0c7738"
 }
 ```
+
+## Queries and mutations for Person interface
+- Mutation
+```
+mutation createNewMonitor($monitorInput: PersonInput!){
+  createPerson(input: $monitorInput){
+    _id
+    name
+  }
+}
+```
+
+- Query Variables
+```
+{
+  "monitorInput": {
+    "name": "Monitor 1",
+    "email": "monitor1@gmail.com",
+    "phone": "30044442020"
+  }
+}
+```
+
+- Query
+```
+{
+  getPeople{
+    _id
+    name
+    email
+    ... on Monitor {
+      phone
+    }
+    ... on Student {
+      avatar
+    }
+  }
+}
+```
